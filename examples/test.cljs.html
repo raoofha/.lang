@@ -1,0 +1,16 @@
+<html>
+<body>
+<div id="content"></div>
+<script type="text/cljs">
+(let [c (js/document.getElementById "content")]
+  (.append c "hello from ClojureScript ")
+  (.append c *clojurescript-version*)
+)
+</script>
+<script type="text/js">
+let c = document.getElementById("content");
+c.appendChild(document.createElement("br"));
+c.append("hello from js");
+</script>
+</body>
+</html>

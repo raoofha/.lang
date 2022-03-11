@@ -1,0 +1,93 @@
+{
+   "content_scripts": 
+   [ 
+     {
+      "matches": [ "*://*/*.cljs", "file://*/*.cljs", "*://*/*.coffee", "file://*/*.coffee", "*://*/*.py", "file://*/*.py", "*://*/*.js", "file://*/*.js", "*://*/*.ts", "file://*/*.ts", "*://*/*.res", "file://*/*.res", "*://*/*.c", "file://*/*.c", "*://*/*.cpp", "file://*/*.cpp"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["src/loader.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.cljs.html", "file://*/*.cljs.html"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/cljs.js"],
+      "run_at": "document_start",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.cljs", "file://*/*.cljs"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/cljs.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.coffee.html", "file://*/*.coffee.html"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/coffeescript.js"],
+      "run_at": "document_start",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.coffee", "file://*/*.coffee"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/coffeescript.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.py.html", "file://*/*.py.html"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/brython.js", "compilers/brython_stdlib.js", "src/brython_load.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.py", "file://*/*.py"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/brython.js", "compilers/brython_stdlib.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.ts.html", "file://*/*.ts.html"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/typescriptServices.js"],
+      "run_at": "document_start",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.ts", "file://*/*.ts"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/typescriptServices.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.res.html", "file://*/*.res.html"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/rescript.js"],
+      "run_at": "document_start",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.res", "file://*/*.res"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/rescript.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     },
+     {
+      "matches": [ "*://*/*.c", "file://*/*.c", "*://*/*.cpp", "file://*/*.cpp"],
+      "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
+      "js": ["compilers/wasm-clang-master/shared.js", "src/wasm-clang/shared_web.js"],
+      "run_at": "document_end",
+      "all_frames": true
+     }
+   ],
+   "web_accessible_resources": ["compilers/wasm-clang-master/*"],
+   "manifest_version": 2,
+   "name": ".lang",
+   "version": "0.0.0"
+}
