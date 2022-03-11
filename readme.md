@@ -1,6 +1,6 @@
 # .lang : run .c .cpp .py .cljs .ts .coffee and more directly in chrome offline
 
-![demo](https://raw.githubusercontent.com/raoofha/.lang/master/demo.mp4)
+https://user-images.githubusercontent.com/2606001/157858381-d50c27ea-6e49-4cbc-9789-e1243c4ff7f7.mp4
 
 * c++ compiler from [here](https://github.com/binji/wasm-clang)
 * python compiler from [brython](https://github.com/brython-dev/brython)
