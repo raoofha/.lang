@@ -15,7 +15,7 @@
  */
 
 let workerSrc = `
-self.importScripts('chrome-extension://fedmidjhgjhnkilhmgadfllglfnbideo/compilers/wasm-clang-master/shared.js');
+self.importScripts('chrome-extension://fedmidjhgjhnkilhmgadfllglfnbideo/src/wasm-clang/shared.js');
 
 let api;
 let port;

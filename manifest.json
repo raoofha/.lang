@@ -81,12 +81,12 @@
      {
       "matches": [ "*://*/*.c", "file://*/*.c", "*://*/*.cpp", "file://*/*.cpp"],
       "exclude_matches": ["*://*.localhost/*", "*://*.github.com/*"],
-      "js": ["compilers/wasm-clang-master/shared.js", "src/wasm-clang/shared_web.js"],
+      "js": ["src/wasm-clang/shared.js", "src/wasm-clang/shared_web.js"],
       "run_at": "document_end",
       "all_frames": true
      }
    ],
-   "web_accessible_resources": ["compilers/wasm-clang-master/*"],
+   "web_accessible_resources": ["*"],
    "manifest_version": 2,
    "name": ".lang",
    "version": "0.0.0"

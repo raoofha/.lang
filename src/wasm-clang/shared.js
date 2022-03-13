@@ -683,7 +683,7 @@ class API {
   }
 
   hostLog(message) {
-    const yellowArrow = '\x1b[1;93m>\x1b[0m ';
+    const yellowArrow = '';//'\x1b[1;93m>\x1b[0m ';
     this.hostWrite(`${yellowArrow}${message}`);
   }
 
@@ -692,13 +692,13 @@ class API {
     this.hostLog(`${message}...`);
     const result = await promise;
     const end = +new Date();
-    this.hostWrite(' done.');
+    //this.hostWrite(' done.');
     if (this.showTiming) {
       const green = '\x1b[92m';
       const normal = '\x1b[0m';
       this.hostWrite(` ${green}(${msToSec(start, end)}s)${normal}\n`);
     }
-    this.hostWrite('\n');
+    //this.hostWrite('\n');
     return result;
   }
 
